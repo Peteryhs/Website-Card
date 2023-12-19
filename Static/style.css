@@ -27,12 +27,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 150vh;
+    margin-top: 100vh; /* add this line */
 }
 
 .qr-code img {
     width: 200px; /* adjust this to change the size of the QR code */
 }
+
 body::before {
     content: "";
     position: absolute;
@@ -41,7 +43,7 @@ body::before {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(ellipse at center, darkblue, lightblue);
+    background: linear-gradient(45deg, rgb(17, 17, 218), rgb(151, 213, 241));
     filter: blur(10px);
     z-index: 0;
     animation: move 5s linear infinite;
