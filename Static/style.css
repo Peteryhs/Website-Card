@@ -30,7 +30,11 @@ body {
     align-items: center;
     height: 150vh;
     opacity: 0;
-    animation: reveal 2s forwards;
+    transition: opacity 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .qr-code img {
