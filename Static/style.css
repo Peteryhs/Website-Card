@@ -45,7 +45,7 @@ body::before {
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(45deg, rgb(17, 17, 218), rgb(151, 213, 241));
-    filter: blur(10px);
+    filter: blur(180px);
     z-index: 0;
     animation: move 5s linear infinite;
 }
