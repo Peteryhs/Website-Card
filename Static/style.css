@@ -8,3 +8,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+.center {
+    text-align: center;
+}
+
+.center img {
+    margin-bottom: 20px;
+}
