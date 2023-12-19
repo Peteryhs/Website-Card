@@ -4,8 +4,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     height: 200vh;
+    background-color: black; /* add this line */
 }
-
 
 .center {
     display: flex;
@@ -14,6 +14,8 @@ body {
     gap: 20px;
     position: relative;
     z-index: 1;
+    margin-top: auto; /* add this line */
+    margin-bottom: auto; /* add this line */
 }
 
 .center img {
@@ -28,7 +30,6 @@ body {
     transition: opacity 1s;
     margin-top: auto;
 }
-
 
 .qr-code img {
     width: 200px; /* adjust this to change the size of the QR code */
