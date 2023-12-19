@@ -23,14 +23,24 @@ body {
 .center img {
     width: 100px; /* adjust this to change the size of the image */
 }
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.qr-code img {
+    width: 200px; /* adjust this to change the size of the QR code */
+}
 body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     background: radial-gradient(ellipse at center, darkblue, lightblue);
     filter: blur(10px);
     z-index: 0;
