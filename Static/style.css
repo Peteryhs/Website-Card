@@ -1,15 +1,11 @@
 body {
-    background-color: black;
-    color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    position: relative;
+    height: 200vh;
 }
+
 
 .center {
     display: flex;
@@ -28,14 +24,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
     opacity: 0;
     transition: opacity 1s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: auto;
 }
+
 
 .qr-code img {
     width: 200px; /* adjust this to change the size of the QR code */
