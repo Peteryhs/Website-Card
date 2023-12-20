@@ -23,12 +23,12 @@ body {
 
 .profile-container {
     display: flex;
+    flex-direction: column; /* Add this line */
     justify-content: center;
     align-items: center;
     height: 100vh;
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
-
 .profile-picture {
     width: 100px;
     height: 100px;
