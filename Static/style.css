@@ -15,12 +15,30 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    background-color: black; /* Add this line */
-    position: relative;
+    background-color: #f0f0f0;
 }
 
+.text-container {
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .profile-container {
     display: flex;
     justify-content: center;
@@ -28,12 +46,7 @@ body {
     height: 100vh;
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    margin-right: 60px;
-    animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
-}
+
 
 .profile-text {
     color: white;
