@@ -100,7 +100,7 @@ body {
 }
 
 .name {
-    animation: glow 0s ease-in-out 1s 1; /* Apply the glow animation */
+    animation: glow 0.5s 0.5s 1; /* Apply the glow animation */
     overflow: hidden;
 }
 
