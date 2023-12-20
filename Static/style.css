@@ -35,7 +35,7 @@ body {
 .profile-pic {
     position: relative;
     right: 60px;
-    border-radius: 50%;
+    width: 100px; 
     object-fit: cover;
     animation: slideIn 0.5s ease-in;
 }
@@ -54,6 +54,12 @@ body {
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
 
+.githun-link {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
+}
+
 .background-ellipse {
     position: absolute;
     top: 50%;
@@ -64,7 +70,7 @@ body {
     background: linear-gradient(45deg, rgb(29, 14, 236), rgb(0, 247, 255));
     border-radius: 50%;
     z-index: -1;
-    animation: spin 3600s linear infinite, expand 1s ease-in-out;
+    animation: expand 1s ease-in-out;
 }
 
 @keyframes spin {
