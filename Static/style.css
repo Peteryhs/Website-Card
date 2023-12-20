@@ -38,6 +38,8 @@ body {
 
 .profile-email, .profile-greeting {
     font-family: 'Rubik', sans-serif;
+    width: 100%;
+    text-align: center;
 }
 
 .profile-greeting {
@@ -59,7 +61,7 @@ body {
     height: 600px;
     background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    filter: blur(140px);
+    filter: blur(180px);
     z-index: -1;
     animation: spin 5s linear infinite, expand 1s ease-in-out;
 }
@@ -75,8 +77,8 @@ body {
         height: 0;
     }
     100% {
-        width: 200px;
-        height: 300px;
+        width: 400px;
+        height: 600px;
     }
 }
 
@@ -86,7 +88,7 @@ body {
         text-shadow: none;
     }
     50% {
-        color: rgb(0, 68, 255);
+        color: rgb(0, 89, 255);
         text-shadow: 0 0 10px rgb(0, 195, 255), 0 0 20px rgb(0, 60, 255), 0 0 30px rgb(0, 17, 255), 0 0 40px blue;
     }
     100% {
