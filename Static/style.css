@@ -32,13 +32,6 @@ body {
     position: relative;
 }
 
-.profile-pic {
-    position: relative;
-    right: 60px;
-    width: 100px; 
-    object-fit: cover;
-    animation: slideIn 0.5s ease-in;
-}
 .profile-container {
     display: flex;
     justify-content: center;
@@ -47,8 +40,16 @@ body {
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
 
+.profile-pic {
+    order: 1; /* This will place the image before the text */
+    width: 100px;
+    object-fit: cover;
+    animation: slideIn 0.5s ease-in;
+    margin-right: 60px; /* This will place the image 60px to the left of the text */
+}
 
 .profile-text {
+    order: 2; /* This will place the text after the image */
     color: white;
     font-family: 'Rubik', sans-serif;
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
