@@ -20,7 +20,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000000;
 }
 
 .text-container {
@@ -38,6 +38,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    animation: slideIn 0.5s ease-in;
 }
 .profile-container {
     display: flex;
@@ -63,7 +64,7 @@ body {
     height: 450px;
     background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    filter: blur(140px);
+    filter: blur(200px);
     z-index: -1;
     animation: spin 5s linear infinite, expand 1s ease-in-out;
 }
