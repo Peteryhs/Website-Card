@@ -64,7 +64,7 @@ body {
     height: 450px;
     background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    filter: blur(200px);
+    backdrop-filter: blur(12vmax);
     z-index: -1;
     animation: spin 20s linear infinite, expand 1s ease-in-out;
 }
