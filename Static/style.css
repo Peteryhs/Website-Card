@@ -28,9 +28,8 @@ body {
 }
 
 .content-container {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+    z-index: 3;
+    position: relative;
 }
 
 .profile-pic {
