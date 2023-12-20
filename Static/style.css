@@ -62,10 +62,10 @@ body {
     transform: translate(-50%, -50%);
     width: 350px;
     height: 450px;
-    background: linear-gradient(45deg, rgb(0, 255, 234), blue);
+    background: linear-gradient(45deg, rgb(29, 14, 236), rgb(0, 247, 255));
     border-radius: 50%;
     z-index: -1;
-    animation: spin 20s linear infinite, expand 1s ease-in-out;
+    animation: spin 3600s linear infinite, expand 1s ease-in-out;
 }
 
 @keyframes spin {
