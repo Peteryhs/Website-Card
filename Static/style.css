@@ -71,3 +71,22 @@ body {
         height: 300px;
     }
 }
+
+@keyframes glow {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+    50% {
+        color: blue;
+        text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue;
+    }
+    100% {
+        color: white;
+        text-shadow: none;
+    }
+}
+
+.name {
+    animation: glow 1s ease-in-out 1s 1; /* Apply the glow animation */
+}
