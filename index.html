@@ -9,10 +9,29 @@
     <div class="background-ellipse"></div>
     <div id="blur"></div>
     <div class="profile-container">
-        <img class="profile-pic" src="pfp.jpg" alt="Profile Picture">
+        <img class="profile-pic" src="Static/pfp.jpg" alt="Profile Picture">
         <div class="text-container">
-            <p class="profile-text">Hi, I am Peter</p>
-            <p class="contact-info">petershao288@gmail.com<a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub</a></p>
+            <h1 class="profile-text">Hi, I am <span class="name">Peter</span></h1>
+            <p class="contact-info">petershao288@gmail.com
+            <br>
+            <a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub</a></p>
+            <div class="switch">
+                <input type="radio" name="mode" id="light-mode" checked>
+                <label for="light-mode">Light</label>
+                
+                <input type="radio" name="mode" id="dark-mode">
+                <label for="dark-mode">Dark</label>
+                
+                <input type="radio" name="mode" id="third-option">
+                <label for="third-option">Third Option</label>
+            </div>
+            <script>
+                document.querySelectorAll('.switch input').forEach(input => {
+                    input.addEventListener('change', function() {
+                        document.body.className = this.id;
+                    });
+                });
+            </script>
         </div>
     </div>
         </body>
