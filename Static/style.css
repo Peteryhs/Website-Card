@@ -64,7 +64,6 @@ body {
     height: 450px;
     background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    backdrop-filter: blur(12vmax);
     z-index: -1;
     animation: spin 20s linear infinite, expand 1s ease-in-out;
 }
@@ -114,4 +113,12 @@ body {
     color: white;
     font-family: 'Rubik', sans-serif;
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(20vmax);
 }
