@@ -20,11 +20,13 @@ body {
     background-color: black; /* Add this line */
     position: relative;
 }
+
 .profile-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
 
 .profile-picture {
@@ -32,14 +34,6 @@ body {
     height: 100px;
     margin-right: 60px;
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
-}
-
-.profile-email, .profile-greeting {
-    font-family: 'Rubik', sans-serif;
-}
-
-.profile-greeting {
-    margin-top: 60px;
 }
 
 .profile-text {
@@ -54,10 +48,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
-    height: 550px;
+    height: 450px;
     background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    filter: blur(180px);
+    filter: blur(140px);
     z-index: -1;
     animation: spin 5s linear infinite, expand 1s ease-in-out;
 }
@@ -74,7 +68,7 @@ body {
     }
     100% {
         width: 350px;
-        height: 550px;
+        height: 450px;
     }
 }
 
@@ -84,7 +78,7 @@ body {
         text-shadow: none;
     }
     50% {
-        color: rgb(0, 89, 255);
+        color: rgb(17, 100, 255);
         text-shadow: 0 0 10px rgb(0, 195, 255), 0 0 20px rgb(0, 60, 255), 0 0 30px rgb(0, 17, 255), 0 0 40px blue;
     }
     100% {
