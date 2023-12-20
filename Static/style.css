@@ -87,15 +87,12 @@ body {
 @keyframes glow {
     0% {
         color: white;
-        text-shadow: none;
     }
     50% {
         color: rgb(17, 100, 255);
-        text-shadow: 0 0 10px rgb(0, 195, 255), 0 0 12px rgb(0, 60, 255), 0 0 20px rgb(0, 17, 255), 0 0 25px blue;
     }
     100% {
         color: white;
-        text-shadow: none;
     }
 }
 
