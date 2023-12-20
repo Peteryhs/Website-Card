@@ -90,3 +90,15 @@ body {
 .name {
     animation: glow 1s ease-in-out 1s 1; /* Apply the glow animation */
 }
+
+.main-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.inner-block {
+    width: calc((100% - 30px) / 2); /* Subtract the gap from the total width and divide by 2 */
+    height: 200px; /* Adjust as needed */
+    background: white; /* Adjust as needed */
+}
