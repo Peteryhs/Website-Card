@@ -1,65 +1,13 @@
-body {
-    background: black;
-    position: relative;
+.profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: auto; /* Add this line */
-}
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px; /* This will create a gap between the image and the text */
-    position: relative;
-    z-index: 1;
-    margin: auto; /* This will center align the flex container vertically */
+    height: 100vh; /* This will make the container take up the full height of the viewport */
+    text-align: center;
 }
 
-.center img {
-    width: 100px; /* adjust this to change the size of the image */
-}
-
-.center .text { /* add this rule */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; /* This will make the text white */
-}
-
-.center .qr-code {
-    opacity: 0; /* This will initially hide the QR code */
-    position: relative;
-    top: 50px; /* This will position the QR code 50px below the text and the image */
-    animation: reveal 2s forwards; /* This will add the reveal effect */
-}
-
-@keyframes reveal {
-    to {
-        opacity: 1; /* This will make the QR code visible */
-    }
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 50%; /* This will position the top edge of the ellipse at the center of the body */
-    left: 50%; /* This will position the left edge of the ellipse at the center of the body */
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* This will make the shape an ellipse */
-    background: linear-gradient(45deg, rgb(17, 17, 218), rgb(151, 213, 241));
-    filter: blur(100px); /* This will blur the ellipse */
-    z-index: 0; /* This will put the ellipse behind the content */
-    transform: translate(-50%, -50%) rotate(0deg); /* This will center the ellipse and set the initial rotation */
-    animation: rotate 5s linear infinite; /* This will add a rotating effect */
-}
-
-@keyframes rotate {
-    to {
-        transform: translate(-50%, -50%) rotate(360deg); /* This will rotate the ellipse 360 degrees */
-    }
+.profile-picture {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    margin-right: 20px; /* Creates some space between the image and the text */
 }
