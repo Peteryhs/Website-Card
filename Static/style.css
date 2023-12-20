@@ -78,8 +78,8 @@ body {
         text-shadow: none;
     }
     50% {
-        color: blue;
-        text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue;
+        color: rgb(0, 68, 255);
+        text-shadow: 0 0 10px rgb(0, 195, 255), 0 0 20px rgb(0, 60, 255), 0 0 30px rgb(0, 17, 255), 0 0 40px blue;
     }
     100% {
         color: white;
@@ -88,7 +88,7 @@ body {
 }
 
 .name {
-    animation: glow 1s ease-in-out 1s 1; /* Apply the glow animation */
+    animation: glow 1s ease-in-out 2s 1; /* Apply the glow animation */
 }
 
 .main-block {
