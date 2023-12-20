@@ -1,5 +1,6 @@
 .center {
     display: flex;
+    flex-direction: row; /* add this line */
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -13,10 +14,11 @@
     width: 100px; /* adjust this to change the size of the image */
 }
 
-.center .text { /* add this rule */
+.center .text {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white; /* add this line */
 }
 
 .qr-code {
@@ -26,10 +28,11 @@
     opacity: 0;
     transition: opacity 1s;
     margin-top: auto;
+    margin-bottom: 20vh;
 }
 
 .qr-code img {
-    width: 200px; /* adjust this to change the size of the QR code */
+    width: 400px;
 }
 
 
