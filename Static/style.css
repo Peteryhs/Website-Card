@@ -1,8 +1,13 @@
 body {
     background: black; /* This will make the background black */
     position: relative; /* This will make the body a positioning context for the ellipse */
+    display: flex; /* This will make the body a flex container */
+    justify-content: center; /* This will center the items horizontally */
+    align-items: center; /* This will center the items vertically */
+    height: 100vh; /* This will make the body take up the full viewport height */
+    margin: 0; /* This will remove the default margin */
+    padding: 0; /* This will remove the default padding */
 }
-
 .center {
     display: flex;
     justify-content: center;
@@ -42,13 +47,20 @@ body {
 body::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%; /* This will position the top edge of the ellipse at the center of the body */
+    left: 50%; /* This will position the left edge of the ellipse at the center of the body */
     width: 200px;
     height: 200px;
     border-radius: 50%; /* This will make the shape an ellipse */
     background: linear-gradient(45deg, rgb(17, 17, 218), rgb(151, 213, 241));
     filter: blur(180px); /* This will blur the ellipse */
     z-index: 0; /* This will put the ellipse behind the content */
+    transform: translate(-50%, -50%) rotate(0deg); /* This will center the ellipse and set the initial rotation */
+    animation: rotate 5s linear infinite; /* This will add a rotating effect */
 }
 
+@keyframes rotate {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg); /* This will rotate the ellipse 360 degrees */
+    }
+}
