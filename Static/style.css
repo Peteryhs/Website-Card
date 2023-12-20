@@ -5,16 +5,21 @@
 
 .profile-container {
     display: flex;
-    flex-direction: column; /* Add this line */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    animation: fadeIn 2s ease-in 1;
+    animation: fadeIn 0.5s ease-in 1;
 }
 
 .profile-picture {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    margin-right: 20px; /* Creates some space between the image and the text */
-    animation: fadeIn 2s ease-in 1; /* Apply the fade-in animation */
+    width: 100px;
+    height: 100px;
+    margin-right: 60px; /* Adjust this to create a gap of 60px */
+    animation: fadeIn 2s ease-in 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Add this line */
 }
