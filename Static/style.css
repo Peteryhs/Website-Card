@@ -1,24 +1,22 @@
 .center {
     display: flex;
-    flex-direction: row; /* add this line */
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px; /* This will create a gap between the image and the text */
     position: relative;
     z-index: 1;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto; /* This will center align the flex container vertically */
 }
 
 .center img {
     width: 100px; /* adjust this to change the size of the image */
 }
 
-.center .text {
+.center .text { /* add this rule */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* add this line */
+    color: white; /* This will make the text white */
 }
 
 .qr-code {
@@ -28,11 +26,11 @@
     opacity: 0;
     transition: opacity 1s;
     margin-top: auto;
-    margin-bottom: 20vh;
+    margin-bottom: 20vh; /* add this line */
 }
 
 .qr-code img {
-    width: 400px;
+    width: 400px; /* adjust this to change the size of the QR code */
 }
 
 
