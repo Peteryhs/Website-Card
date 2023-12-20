@@ -49,9 +49,9 @@ body {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 300px;
-    background: linear-gradient(45deg, red, blue);
+    background: linear-gradient(45deg, rgb(0, 255, 234), blue);
     border-radius: 50%;
-    filter: blur(180px);
+    filter: blur(140px);
     z-index: -1;
     animation: spin 5s linear infinite;
 }
