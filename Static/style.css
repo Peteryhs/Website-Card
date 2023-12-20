@@ -1,3 +1,8 @@
+body {
+    background: black; /* This will make the background black */
+    position: relative; /* This will make the body a positioning context for the ellipse */
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -41,22 +46,9 @@ body::before {
     left: 0;
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* This will make the shape an ellipse */
     background: linear-gradient(45deg, rgb(17, 17, 218), rgb(151, 213, 241));
-    filter: blur(180px);
-    z-index: 0;
-    animation: move 5s linear infinite;
+    filter: blur(180px); /* This will blur the ellipse */
+    z-index: 0; /* This will put the ellipse behind the content */
 }
 
-@keyframes move {
-    0% { transform: translate(100vw, 0); }
-    25% { transform: translate(50vw, 50vh); }
-    50% { transform: translate(0, 100vh); }
-    75% { transform: translate(50vw, 150vh); }
-    100% { transform: translate(100vw, 200vh); }
-}
-
-@keyframes reveal {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
