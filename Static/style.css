@@ -94,3 +94,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.email-text {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
+}
