@@ -36,6 +36,14 @@ body {
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
 
+.profile-email, .profile-greeting {
+    font-family: 'Rubik', sans-serif;
+}
+
+.profile-greeting {
+    margin-top: 60px;
+}
+
 .profile-text {
     color: white;
     font-family: 'Rubik', sans-serif;
@@ -91,14 +99,4 @@ body {
     animation: glow 1s ease-in-out 2s 1; /* Apply the glow animation */
 }
 
-.main-block {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
 
-.inner-block {
-    width: calc((100% - 30px) / 2); /* Subtract the gap from the total width and divide by 2 */
-    height: 200px; /* Adjust as needed */
-    background: white; /* Adjust as needed */
-}
