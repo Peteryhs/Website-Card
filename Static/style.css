@@ -23,7 +23,6 @@ body {
 
 .profile-container {
     display: flex;
-    flex-direction: column; /* Add this line */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -91,4 +90,7 @@ body {
     animation: glow 2s ease-in-out 1s 1; /* Apply the glow animation */
 }
 
-
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
