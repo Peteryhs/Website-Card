@@ -5,11 +5,11 @@
 
 .profile-container {
     display: flex;
+    flex-direction: column; /* Add this line */
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This will make the container take up the full height of the viewport */
-    text-align: center;
-    animation: fadeIn 2s ease-in 1; /* Apply the fade-in animation */
+    height: 100vh;
+    animation: fadeIn 2s ease-in 1;
 }
 
 .profile-picture {
