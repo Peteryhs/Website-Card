@@ -1,13 +1,20 @@
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* This will make the container take up the full height of the viewport */
     text-align: center;
+    animation: fadeIn 2s ease-in 1; /* Apply the fade-in animation */
 }
 
 .profile-picture {
     width: 100px; /* Adjust as needed */
     height: 100px; /* Adjust as needed */
     margin-right: 20px; /* Creates some space between the image and the text */
+    animation: fadeIn 2s ease-in 1; /* Apply the fade-in animation */
 }
