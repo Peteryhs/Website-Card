@@ -31,9 +31,7 @@ body {
 
 .profile-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     animation: slideIn 0.5s ease-in 1; /* Apply the slide-in animation */
 }
 
@@ -50,7 +48,7 @@ body {
     order: 2; /* This will place the text after the image */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .profile-text {
