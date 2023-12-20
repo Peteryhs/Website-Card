@@ -1,18 +1,19 @@
 body {
-    background: black; /* This will make the background black */
-    position: relative; /* This will make the body a positioning context for the ellipse */
-    display: flex; /* This will make the body a flex container */
-    justify-content: center; /* This will center the items horizontally */
-    align-items: center; /* This will center the items vertically */
-    height: 100vh; /* This will make the body take up the full viewport height */
-    margin: 0; /* This will remove the default margin */
-    padding: 0; /* This will remove the default padding */
+    background: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Add this line */
 }
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* This will create a gap between the image and the text */
+    gap: 60px; /* This will create a gap between the image and the text */
     position: relative;
     z-index: 1;
     margin: auto; /* This will center align the flex container vertically */
