@@ -1,144 +1,60 @@
-@media only screen and (max-width: 600px) {
-    /* Styles for mobile screens */
-    .text-container {
-        flex-direction: column;
-    }
-
-    .switch {
-        flex-direction: column;
-        margin-top: 50px;
-    }
-}
-
-:root {
-    --text-color: black;
-    --background-color: white;
-}
-
 body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+    transition: background-color 1s, color 1s; /* Add this line */
+}
+.full-height {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.center-xy {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: color 1s, background-color 1s;
 }
-
-.dark-mode {
-    --text-color: white;
-    --background-color: black;
+.img-margin {
+    margin-right: 300px;
 }
-
-#blur {
-    height: 100%;
+.round-img {
+    border-radius: 50%;
+    animation: slide-in 1s forwards;
     width: 100%;
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(8vmax);
+    height: 100%;
+    margin-right: 60px; /* Increase this value as needed */
 }
-
-.profile-container, .profile-text, .contact-info, .github-link {
-    animation: slideIn 0.5s ease-in 1;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-}
-
-.profile-pic {
-    order: 1;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    animation: slideIn 0.5s ease-in;
-    margin-right: 60px;
-    border-radius: 50%;
-}
-
-.text-container {
-    order: 2;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-text, .contact-info, .github-link {
-    font-family: 'Rubik', sans-serif;
-}
-
-.background-ellipse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 450px;
-    background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
-    border-radius: 50%;
-    z-index: -1;
-    animation: expand 1.5s ease-in-out;
-}
-
-.switch {
-    font-family: 'Rubik', sans-serif;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
-}
-
-.switch input {
-    display: none;
-}
-
-.switch label {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0 10px;
-}
-
-#light-mode:checked + label {
-    background-color: #f0f0f0;
-}
-
-#dark-mode:checked + label {
-    background-color: #333;
-    color: white;
-}
-
-#third-option:checked + label {
-    background-color: #f0f0f0;
-}
-
-.name::before {
-    content: " ";
-}
-
-.name {
-    animation: gradient 2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-50px);
+@keyframes slide-in {
+    from {
+        transform: translateX(-100px);
         opacity: 0;
     }
-    100% {
+    to {
         transform: translateX(0);
         opacity: 1;
     }
 }
-
-@keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+.fade-in-text {
+    animation: fade-in 1.5s forwards;
+    font-family: 'Rubik', sans-serif;
 }
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
 
 @keyframes expand {
     0% {
@@ -151,19 +67,152 @@ body {
     }
 }
 
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(12vmax);
+}
+
+.background-ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 450px;
+    background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
+    border-radius: 50%;
+    z-index: -2;
+    animation: spin 200s, expand 1.5s ease-in-out;
+}
+
 @keyframes glow {
     0% {
-        color: white;
-    }
-    50% {
-        color: rgb(17, 100, 255);
+        color: rgb(0, 0, 0);
     }
     100% {
-        color: white;
+        color: rgb(17, 100, 255);
     }
 }
 
-@keyframes gradient {
-    0% { color: rgb(0, 0, 0); }
-    100% { color: rgb(0, 153, 255); }
+.glow {
+    color: #000000;
+    animation: glow 1.5s forwards;
+}
+
+
+.option {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.highlight {
+    position: absolute;
+    height: 100%;
+    width: 33.33%;
+    background: #4CAF50;
+    transition: left 0.3s ease;
+    pointer-events: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+@keyframes glow-pfp {
+    0% {
+        box-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff;
+    }
+    100% {
+        box-shadow: 0 0 10px #add8e6, 0 0 20px #add8e6, 0 0 30px #add8e6, 0 0 40px #add8e6;
+    }
+}
+
+#profilePicWrapper {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden; /* This is to ensure the glow follows the border-radius */
+    width: 250px; /* Adjust this value as needed */
+    height: 250px; /* Adjust this value as needed */
+    margin: 60px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;  /* Adjust this value as needed */
+    height: 30px; /* Adjust this value as needed */
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px; /* Adjust this value as needed */
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Adjust this value as needed */
+    width: 20px;  /* Adjust this value as needed */
+    left: 5px;    /* Adjust this value as needed */
+    bottom: 5px;  /* Adjust this value as needed */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #fff;
+  }
+
+
+
+h1, p, b {
+    margin-bottom: 0; /* Remove the bottom margin */
 }
