@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter's Card</title>
     <link href="Static/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    
 
     
 </head>
 <body>
+    <div class="container-fluid full-height">
     <div class="background-ellipse"></div>
     <div id="blur"></div>
     <div class="gradient-ellipse"></div>
-    <div class="container-fluid full-height">
+
         <div class="row full-height">
             <div class="col-12 col-md-8 offset-md-2 center-xy">
                 <div class="d-flex flex-column flex-md-row align-items-center">
@@ -24,10 +26,14 @@
                     <img id="profilePic" class="round-img" src="Static/pfp.jpg" onclick="changeImage()" alt="Profile Picture">
                     </div>
                     <div>
-                        <h1 class="fade-in-text">Hi, I am <span class="glow">Peter</span></h1>
+                        <div class="flex-container">
+                            <h1 class="fade-in-text d-none d-md-block">Hi,&nbsp;I&nbsp;am&nbsp;</h1>
+                            <div class="typing-container d-none d-md-block"><h1><span id="typing" class="cursor"></span></h1></div>
+                            <h1 class="fade-in-text d-md-none">Hi,&nbsp;I&nbsp;am&nbsp;<span class="glow">Peter</span></h1>
+                        </div>
                         <b><p class="fade-in-text">Ontario, Canada, 15</p></b>
-                        <p class="contact-info">petershao288@gmail.com</p>
-                        <p class="contact-info"><a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub</a></p>
+                        <p class="fade-in-text">petershao288@gmail.com</p>
+                        <p class="fade-in-text"><a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub</a></p>
                         <label class="switch">
                             <input type="checkbox" id="darkModeSwitch">
                             <span class="slider round"></span>

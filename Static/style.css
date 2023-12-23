@@ -136,7 +136,7 @@ body {
 
 @keyframes glow-pfp {
     0% {
-        box-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff;
+        box-shadow: 0 0 5px rgb(17, 100, 255), 0 0 10px rgb(17, 100, 255), 0 0 15px rgb(17, 100, 255), 0 0 20px rgb(17, 100, 255);
     }
     100% {
         box-shadow: 0 0 10px #add8e6, 0 0 20px #add8e6, 0 0 30px #add8e6, 0 0 40px #add8e6;
@@ -216,3 +216,30 @@ body.dark-mode {
 h1, p, b {
     margin-bottom: 0; /* Remove the bottom margin */
 }
+
+h1, p, b, .typing-container {
+    margin-bottom: 0; /* Remove the bottom margin */
+}
+
+.cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.flex-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.typing-container {
+    display: inline-block;
+    width: 11em; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
