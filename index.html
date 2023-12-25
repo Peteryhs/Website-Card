@@ -6,17 +6,21 @@
     <title>Peter's Card</title>
     <link href="Static/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-   
+    <!-- Custom CSS -->
+    
+
+    
 </head>
 <body>
-    <div class="container-fluid full-height">
+    <div class="">
     <div class="background-ellipse"></div>
     <div id="blur"></div>
     <div class="gradient-ellipse"></div>
 
         <div class="row full-height">
-            <div class="col-12 col-md-8 offset-md-2 center-xy">
+            <div class="col-12 col-md-10 offset-md-1 center-xy">
                 <div class="d-flex flex-column flex-md-row align-items-center">
                     <div id="profilePicWrapper">
                     <img id="profilePic" class="round-img" src="Static/pfp.jpg" onclick="changeImage()" alt="Profile Picture">
@@ -28,8 +32,25 @@
                             <h1 class="fade-in-text d-md-none">Hi,&nbsp;I&nbsp;am&nbsp;<span class="glow">Peter</span></h1>
                         </div>
                         <b><p class="fade-in-text">Ontario, Canada, 15</p></b>
-                        <p class="fade-in-text">petershao288@gmail.com</p>
-                        <p class="fade-in-text"><a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub</a></p>
+                        <p class="fade-in-text"><a href="https://github.com/Peteryhs11" style="text-decoration: none; color: inherit;">GitHub </a>| petershao288@gmail.com</p>
+                        <div class="carousel-container">
+                            <div id="infoCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="fade-in-text carousel-inner">
+                              <div class="carousel-item active">
+                                <p>Innovative High School Tech Enthusiast</p>
+                              </div>
+                              <div class="carousel-item">
+                              <p>Software developer</p>
+                              </div>
+                              <div class="carousel-item">
+                                <p>Minecraft Maestro</p>
+                              </div>
+                              <div class="carousel-item">
+                                <p>Hardcore Android/Windows/Linux fan</p>
+                              </div>
+
+                            </div>
+                        </div>
                         <label class="switch">
                             <input type="checkbox" id="darkModeSwitch">
                             <span class="slider round"></span>
@@ -40,6 +61,9 @@
         </div>
     </div>
 </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

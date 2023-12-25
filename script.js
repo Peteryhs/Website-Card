@@ -51,3 +51,9 @@ if (i < txt.length) {
 }
 
 window.onload = typeWriter;
+
+$(document).ready(function(){
+$('#infoCarousel').carousel({
+  interval: 2000 // specifies the time delay between slides in milliseconds
+});
+});

@@ -1,9 +1,13 @@
+
 body {
     background-color: #ffffff;
     color: #000000;
     font-family: 'Rubik', sans-serif;
     transition: background-color 1s, color 1s; /* Add this line */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
 }
+
 .full-height {
     height: 100vh;
     position: relative;
@@ -212,11 +216,6 @@ body.dark-mode {
   }
 
 
-
-h1, p, b {
-    margin-bottom: 0; /* Remove the bottom margin */
-}
-
 h1, p, b, .typing-container {
     margin-bottom: 0; /* Remove the bottom margin */
 }
@@ -243,3 +242,21 @@ h1, p, b, .typing-container {
     white-space: nowrap;
 }
 
+#infoCarousel {
+    width: 100%; /* Adjust as needed */
+    height: 3vh; /* Set a fixed height */
+    margin: auto;
+}
+.carousel-container {
+    width: 300px; /* Adjust as needed */
+    overflow: hidden; /* Hide the overflowing content */
+}
+.carousel-item {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align the content to the start */
+    align-items: center; /* Center the content vertically */
+    text-align: left; /* Align the text to the left */
+    height: 100%; /* Make the item take up the full height of the carousel */
+    width: 100%; /* Make the item take up the full width of the carousel */
+    line-height: 1.5; /* Adjust as needed */
+}
