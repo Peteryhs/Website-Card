@@ -45,6 +45,7 @@ if (i < txt.length) {
     document.getElementById('typing').innerHTML = '<b>Peter</b>';
     document.getElementById('typing').classList.remove('cursor');
     // Add the glow effect
+    document.getElementById('typing').classList.add('greeting-js');
     document.getElementById('typing').classList.add('glow');
   }, 500);
 }

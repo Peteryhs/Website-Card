@@ -39,6 +39,7 @@ body {
     }
 }
 .fade-in-text {
+    font-size: 1.2em;
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
 }
@@ -151,8 +152,8 @@ body {
     display: inline-block;
     border-radius: 50%;
     overflow: hidden; /* This is to ensure the glow follows the border-radius */
-    width: 250px; /* Adjust this value as needed */
-    height: 250px; /* Adjust this value as needed */
+    width: 300px; /* Adjust this value as needed */
+    height: 300px; /* Adjust this value as needed */
     margin: 60px;
 }
 
@@ -248,7 +249,7 @@ h1, p, b, .typing-container {
     margin: auto;
 }
 .carousel-container {
-    width: 300px; /* Adjust as needed */
+    width: 400px; /* Adjust as needed */
     overflow: hidden; /* Hide the overflowing content */
 }
 .carousel-item {
@@ -259,4 +260,23 @@ h1, p, b, .typing-container {
     height: 100%; /* Make the item take up the full height of the carousel */
     width: 100%; /* Make the item take up the full width of the carousel */
     line-height: 1.5; /* Adjust as needed */
+}
+
+.greeting {
+    font-size: 3em; /* Adjust as needed */
+    font-weight: 500 !important;
+    margin: 0 !important;
+    font-family: 'Rubik', sans-serif;
+}
+
+.greeting-js {
+    font-size: 1.2em; /* Adjust as needed */
+    font-weight: 500 !important;
+    margin: 0 !important;
+    font-family: 'Rubik', sans-serif;
+}
+
+.fade-in-text-m {
+    animation: fade-in 1.5s forwards;
+    font-family: 'Rubik', sans-serif;
 }
