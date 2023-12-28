@@ -152,6 +152,15 @@ body {
     }
 }
 
+@keyframes glow-pfp-fade-in {
+    0% {
+        box-shadow: 0 0 0px transparent;
+    }
+    100% {
+        box-shadow: 0 0 1px rgb(17, 100, 255), 0 0 3px rgb(77, 116, 189), 0 0 5px rgb(17, 100, 255), 0 0 8px rgb(17, 100, 255);
+    }
+}
+
 #profilePicWrapper {
     display: inline-block;
     border-radius: 50%;
@@ -161,65 +170,85 @@ body {
     margin: 60px;
 }
 
+#profilePicWrapper:hover {
+    /* Keep your hover animation here */
+    animation: glow-pfp-fade-in 1s infinite alternate;
+}
 
-.switch {
+.icon-button:focus {
+    outline: none;
+}
+
+.icon-button-container {
     position: relative;
     display: inline-block;
-    width: 55px;  /* Adjust this value as needed */
-    height: 30px; /* Adjust this value as needed */
 }
 
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
+.icon-button-container.loading::after {
+    content: "";
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px; /* Adjust this value as needed */
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px; /* Adjust this value as needed */
-    width: 20px;  /* Adjust this value as needed */
-    left: 5px;    /* Adjust this value as needed */
-    bottom: 5px;  /* Adjust this value as needed */
-    background-color: white;
-    transition: .4s;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-  }
-
-input:checked + .slider {
-    background-color: #2196F3;
+    border: 2px solid transparent;
+    border-top-color: #000; /* Change this to the color you want for the progress bar */
+    animation: spin-load 1s linear;
+}
+@keyframes spin-load {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
+.icon-button {
     border-radius: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
 }
+
+.icon-button .fas {
+    font-size: 35px; /* Adjust this value as needed */
+    transition: opacity 1s ease-in-out; /* Add a transition */
+    opacity: 0;
+}
+
+.icon-button .fa-sun {
+    opacity: 1; /* Show the sun icon by default */
+}
+
+.icon-button .fa-moon {
+    display: none;
+}
+
+body.dark-mode .icon-button .fa-moon {
+    display: inline;
+    color: #fff;
+    opacity: 1; /* Show the moon icon in dark mode */
+}
+
+body.dark-mode .icon-button .fa-sun {
+    display: none;
+}
+
+body.dark-mode .icon-button-container.loading::after {
+    border-top-color: #fff;
+}
+
 
 body.dark-mode {
     background-color: #000000;
     color: #fff;
-  }
-
+}
 
 h1, p, b, .typing-container {
     margin-bottom: 0; /* Remove the bottom margin */
@@ -295,3 +324,4 @@ h1, p, b, .typing-container {
     justify-content: center;
     align-items: center;
 }
+

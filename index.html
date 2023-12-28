@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Custom CSS -->
     
 
@@ -23,7 +24,7 @@
             <div class="col-12 col-md-10 offset-md-1 center-xy">
                 <div class="d-flex flex-column flex-md-row align-items-center">
                     <div id="profilePicWrapper">
-                    <img id="profilePic" class="round-img" src="Static/pfp.jpg" onclick="changeImage()" alt="Profile Picture">
+                        <img id="profilePic" class="round-img" src="Static/pfp.jpg" onclick="changeImage()" alt="Profile Picture">
                     </div>
                     <div>
                         <div class="flex-container">
@@ -69,9 +70,12 @@
                                 </div>
                             </div>
                         </div>
-                        <label class="switch">
-                            <input type="checkbox" id="darkModeSwitch">
-                            <span class="slider round"></span>
+                        <div class="icon-button-container">
+                        <button id="darkModeButton" class="icon-button">
+                            <i class="fas fa-sun"></i>  <!-- Icon for light mode -->
+                            <i class="fas fa-moon"></i> <!-- Icon for dark mode -->
+                        </button>
+                        </div>
                         </label>
                     </div>
                 </div>
