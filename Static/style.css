@@ -96,21 +96,28 @@ body {
     z-index: -2;
     animation: spin 200s, expand 1.5s ease-in-out;
 }
-
 @keyframes glow {
     0% {
-        color: rgb(0, 0, 0);
+        opacity: 0;
     }
     100% {
-        color: rgb(17, 100, 255);
+        opacity: 1;
     }
 }
 
 .glow {
+    position: relative;
     color: #000000;
     animation: glow 1.5s forwards;
 }
 
+.rainbow {
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(94deg,#0059ff 33.31%,#00c3ff 89.14%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: glow 1.5s forwards;
+}
 
 .option {
     flex: 1;
@@ -145,10 +152,10 @@ body {
 
 @keyframes glow-pfp {
     0% {
-        box-shadow: 0 0 5px rgb(17, 100, 255), 0 0 10px rgb(17, 100, 255), 0 0 15px rgb(17, 100, 255), 0 0 20px rgb(17, 100, 255);
+        box-shadow: 0 0 5px #0059ff, 0 0 10px #0059ff, 0 0 15px #0059ff, 0 0 20px #0059ff;
     }
     100% {
-        box-shadow: 0 0 10px #add8e6, 0 0 20px #add8e6, 0 0 30px #add8e6, 0 0 40px #add8e6;
+        box-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff, 0 0 30px #00c3ff, 0 0 40px #00c3ff;
     }
 }
 

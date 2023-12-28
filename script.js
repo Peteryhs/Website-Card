@@ -58,7 +58,7 @@ if (i < txt.length) {
     document.getElementById('typing').classList.remove('cursor');
     // Add the glow effect
     document.getElementById('typing').classList.add('greeting-js');
-    document.getElementById('typing').classList.add('glow');
+    document.getElementById('typing').classList.add('rainbow');
   }, 500);
 }
 }
