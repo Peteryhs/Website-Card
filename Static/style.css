@@ -5,7 +5,6 @@ body {
     font-family: 'Rubik', sans-serif;
     transition: background-color 1s, color 1s; /* Add this line */
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    overflow-y: hidden; /* Hide vertical scrollbar */
     display: block;
 }
 
@@ -306,7 +305,7 @@ h1, p, b, .typing-container {
 }
 
 .carousel-container-m {
-    width: 65vw; /* Adjust as needed */
+    width: 70vw; /* Adjust as needed */
     overflow: hidden; /* Hide the overflowing content */
 }
 
@@ -380,7 +379,7 @@ h1, p, b, .typing-container {
     height: 5vh; /* Adjust as needed */
     background-color: #f0f0f0; /* Adjust color as needed */
     position: absolute;
-    bottom:85vh;
+    bottom:90%;
     left: 0;
     right: 0;
     margin-left: auto;
