@@ -105,12 +105,6 @@ body {
     }
 }
 
-.glow {
-    position: relative;
-    color: #000000;
-    animation: glow 1.5s forwards;
-}
-
 .rainbow {
     -webkit-text-fill-color: transparent;
     background: linear-gradient(94deg,#0059ff 33.31%,#00c3ff 89.14%);
