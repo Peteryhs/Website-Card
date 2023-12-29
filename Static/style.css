@@ -379,8 +379,8 @@ h1, p, b, .typing-container {
     width: 80%; /* Adjust as needed */
     height: 5vh; /* Adjust as needed */
     background-color: #f0f0f0; /* Adjust color as needed */
-    position: fixed;
-    bottom: 10vh;
+    position: absolute;
+    bottom:85vh;
     left: 0;
     right: 0;
     margin-left: auto;
