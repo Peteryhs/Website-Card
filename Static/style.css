@@ -6,11 +6,13 @@ body {
     transition: background-color 1s, color 1s; /* Add this line */
     overflow-x: hidden; /* Hide horizontal scrollbar */
     overflow-y: hidden; /* Hide vertical scrollbar */
+    display: block;
 }
 
 .All {
     min-height: 100vh; /* Make sure .All takes up at least the full height of the viewport */
     overflow: hidden; /* Prevent vertical scroll if not necessary */
+    display: block;
 }
 
 .full-height {
@@ -91,6 +93,19 @@ body {
     transform: translate(-50%, -50%);
     width: 30vw;
     height: 30vh;
+    background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
+    border-radius: 50%;
+    z-index: -2;
+    animation: spin 200s, expand 1.5s ease-in-out;
+}
+
+.background-ellipse-m {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
     background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
     border-radius: 50%;
     z-index: -2;
@@ -182,7 +197,9 @@ body {
 
 .icon-button-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    bottom: -2px;
 }
 
 .icon-button-container.loading::after {
@@ -214,11 +231,12 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 8px;
+    animation: fade-in 1.5s forwards;
 }
 
 .icon-button .fas {
-    font-size: 35px; /* Adjust this value as needed */
+    font-size: 30px; /* Adjust this value as needed */
     transition: opacity 1s ease-in-out; /* Add a transition */
     opacity: 0;
 }
@@ -326,3 +344,61 @@ h1, p, b, .typing-container {
     align-items: center;
 }
 
+.bottom-container {
+    width: 30%; /* Adjust as needed */
+    height: 5vh; /* Adjust as needed */
+    background-color: #f0f0f0; /* Adjust color as needed */
+    position: fixed;
+    bottom: 28vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    background: transparent;
+}
+
+.bottom-container p {
+    margin: 0;
+}
+
+.bottom-container-m p {
+    margin: 0;
+}
+
+
+.return-text {
+    font-size: 1.2em;
+    animation: fade-in 1.5s forwards;
+    font-family: 'Rubik', sans-serif;
+}
+
+.bottom-container-m {
+    width: 80%; /* Adjust as needed */
+    height: 5vh; /* Adjust as needed */
+    background-color: #f0f0f0; /* Adjust color as needed */
+    position: fixed;
+    bottom: 10vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    .bottom-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .bottom-container-m {
+        display: none;
+    }
+}

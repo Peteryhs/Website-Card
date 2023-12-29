@@ -5,7 +5,7 @@ function changeImage() {
   console.log('Animation applied');
 
   setTimeout(function() {
-      var newSrc = image.src.includes('Static/pfp.jpg') ? 'Static/hovercode.svg' : 'Static/pfp.jpg';
+      var newSrc = image.src.includes('Static/pfp.jpg') ? 'hovercode.svg' : 'Static/pfp.jpg';
       var tempImage = new Image();
       tempImage.src = newSrc;
       tempImage.onload = function() {
@@ -23,23 +23,23 @@ function changeImage() {
 }
 
 
-document.getElementById('darkModeButton').addEventListener('click', function() {
-    var body = document.body;
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        body.classList.add('light-icon');
-    } else {
-        body.classList.remove('light-icon');
-        body.classList.remove('dark-mode');
-    }
-});
+document.querySelectorAll('.icon-button').forEach(button => {
+  button.addEventListener('click', function() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+          body.classList.add('light-icon');
+      } else {
+          body.classList.remove('light-icon');
+          body.classList.remove('dark-mode');
+      }
 
-document.querySelector('.icon-button').addEventListener('click', function() {
-  var container = this.parentElement;
-  container.classList.add('loading');
-  setTimeout(function() {
-      container.classList.remove('loading');
-  }, 1000);
+      var container = this.parentElement;
+      container.classList.add('loading');
+      setTimeout(function() {
+          container.classList.remove('loading');
+      }, 1000);
+  });
 });
 
 let i = 0;
