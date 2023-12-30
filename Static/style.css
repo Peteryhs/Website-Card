@@ -1,16 +1,15 @@
-
 body {
     background-color: #ffffff;
     color: #000000;
     font-family: 'Rubik', sans-serif;
-    transition: background-color 1s, color 1s; /* Add this line */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    transition: background-color 1s, color 1s;
+    overflow-x: hidden;
     display: block;
 }
 
 .All {
-    min-height: 100vh; /* Make sure .All takes up at least the full height of the viewport */
-    overflow: hidden; /* Prevent vertical scroll if not necessary */
+    min-height: 100vh;
+    overflow: hidden;
     display: block;
 }
 
@@ -19,20 +18,24 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .center-xy {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .img-margin {
     margin-right: 300px;
 }
+
 .round-img {
     border-radius: 50%;
     animation: slide-in 1s forwards;
     width: 100%;
     height: 100%;
 }
+
 @keyframes slide-in {
     from {
         transform: translateX(-100px);
@@ -43,11 +46,15 @@ body {
         opacity: 1;
     }
 }
+
 .fade-in-text {
+    margin-bottom: 5px;
+    padding: 0;
     font-size: 1.2em;
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
 }
+
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -56,6 +63,7 @@ body {
         opacity: 1;
     }
 }
+
 @keyframes spin {
     0% {
         background-position: 0% 0%;
@@ -64,7 +72,6 @@ body {
         background-position: 100% 100%;
     }
 }
-
 
 @keyframes expand {
     0% {
@@ -110,6 +117,7 @@ body {
     z-index: -2;
     animation: spin 200s, expand 1.5s ease-in-out;
 }
+
 @keyframes glow {
     0% {
         opacity: 0;
@@ -179,14 +187,13 @@ body {
 #profilePicWrapper {
     display: inline-block;
     border-radius: 50%;
-    overflow: hidden; /* This is to ensure the glow follows the border-radius */
-    width: 300px; /* Adjust this value as needed */
-    height: 300px; /* Adjust this value as needed */
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
     margin: 60px;
 }
 
 #profilePicWrapper:hover {
-    /* Keep your hover animation here */
     animation: glow-pfp-fade-in 1s infinite alternate;
 }
 
@@ -210,9 +217,10 @@ body {
     height: 100%;
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top-color: #000; /* Change this to the color you want for the progress bar */
+    border-top-color: #000;
     animation: spin-load 1s linear;
 }
+
 @keyframes spin-load {
     0% {
         transform: rotate(0deg);
@@ -235,13 +243,13 @@ body {
 }
 
 .icon-button .fas {
-    font-size: 30px; /* Adjust this value as needed */
-    transition: opacity 1s ease-in-out; /* Add a transition */
+    font-size: 30px;
+    transition: opacity 1s ease-in-out;
     opacity: 0;
 }
 
 .icon-button .fa-sun {
-    opacity: 1; /* Show the sun icon by default */
+    opacity: 1;
 }
 
 .icon-button .fa-moon {
@@ -251,7 +259,7 @@ body {
 body.dark-mode .icon-button .fa-moon {
     display: inline;
     color: #fff;
-    opacity: 1; /* Show the moon icon in dark mode */
+    opacity: 1;
 }
 
 body.dark-mode .icon-button .fa-sun {
@@ -262,14 +270,13 @@ body.dark-mode .icon-button-container.loading::after {
     border-top-color: #fff;
 }
 
-
 body.dark-mode {
     background-color: #000000;
     color: #fff;
 }
 
 h1, p, b, .typing-container {
-    margin-bottom: 0; /* Remove the bottom margin */
+    margin-bottom: 0;
 }
 
 .cursor::after {
@@ -289,45 +296,46 @@ h1, p, b, .typing-container {
 
 .typing-container {
     display: inline-block;
-    width: 11em; 
+    width: 11em;
     overflow: hidden;
     white-space: nowrap;
 }
 
 #infoCarousel {
-    width: 100%; /* Adjust as needed */
-    height: 3vh; /* Set a fixed height */
+    width: 100%;
+    height: 3vh;
     margin: auto;
 }
+
 .carousel-container {
-    width: 400px; /* Adjust as needed */
-    overflow: hidden; /* Hide the overflowing content */
+    width: 400px;
+    overflow: hidden;
 }
 
 .carousel-container-m {
-    width: 70vw; /* Adjust as needed */
-    overflow: hidden; /* Hide the overflowing content */
+    width: 70vw;
+    overflow: hidden;
 }
 
 .carousel-item {
-    display: flex; /* Use flexbox for layout */
-    justify-content: flex-start; /* Align the content to the start */
-    align-items: center; /* Center the content vertically */
-    text-align: left; /* Align the text to the left */
-    height: 100%; /* Make the item take up the full height of the carousel */
-    width: 100%; /* Make the item take up the full width of the carousel */
-    line-height: 1.5; /* Adjust as needed */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    line-height: 1.5;
 }
 
 .greeting {
-    font-size: 3em; /* Adjust as needed */
+    font-size: 3em;
     font-weight: 500 !important;
     margin: 0 !important;
     font-family: 'Rubik', sans-serif;
 }
 
 .greeting-js {
-    font-size: 1.2em; /* Adjust as needed */
+    font-size: 1.2em;
     font-weight: 500 !important;
     margin: 0 !important;
     font-family: 'Rubik', sans-serif;
@@ -336,7 +344,20 @@ h1, p, b, .typing-container {
 .fade-in-text-m {
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
+    margin: 0; 
+    padding: 0;
 }
+
+
+
+.fade-in-text p {
+    margin-bottom: 0px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
 .all {
     display: flex;
     justify-content: center;
@@ -344,9 +365,9 @@ h1, p, b, .typing-container {
 }
 
 .bottom-container {
-    width: 30%; /* Adjust as needed */
-    height: 5vh; /* Adjust as needed */
-    background-color: #f0f0f0; /* Adjust color as needed */
+    width: 30%;
+    height: 5vh;
+    background-color: #f0f0f0;
     position: fixed;
     bottom: 28vh;
     left: 0;
@@ -367,7 +388,6 @@ h1, p, b, .typing-container {
     margin: 0;
 }
 
-
 .return-text {
     font-size: 1.2em;
     animation: fade-in 1.5s forwards;
@@ -375,11 +395,11 @@ h1, p, b, .typing-container {
 }
 
 .bottom-container-m {
-    width: 80%; /* Adjust as needed */
-    height: 5vh; /* Adjust as needed */
-    background-color: #f0f0f0; /* Adjust color as needed */
+    width: 80%;
+    height: 5vh;
+    background-color: #f0f0f0;
     position: absolute;
-    bottom:90%;
+    bottom:10%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -401,3 +421,13 @@ h1, p, b, .typing-container {
         display: none;
     }
 }
+
+
+@media screen and (max-width: 767px) {
+    .col-12.col-md-10.offset-md-1.center-xy {
+      /* Add your CSS rules here. For example: */
+      padding: 0;
+      margin: 0;
+      bottom: 10vh;
+    }
+  }

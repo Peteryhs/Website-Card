@@ -5,7 +5,7 @@ function changeImage() {
   console.log('Animation applied');
 
   setTimeout(function() {
-      var newSrc = image.src.includes('Static/pfp.jpg') ? 'hovercode.svg' : 'Static/pfp.jpg';
+      var newSrc = image.src.includes('Static/pfp.jpg') ? 'Static/hovercode.svg' : 'Static/pfp.jpg';
       var tempImage = new Image();
       tempImage.src = newSrc;
       tempImage.onload = function() {
