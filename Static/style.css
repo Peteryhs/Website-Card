@@ -4,6 +4,7 @@ body {
     font-family: 'Rubik', sans-serif;
     transition: background-color 1s, color 1s;
     overflow-x: hidden;
+    overflow-y: hidden;
     display: block;
 }
 
@@ -313,7 +314,7 @@ h1, p, b, .typing-container {
 }
 
 .carousel-container-m {
-    width: 70vw;
+    width: 80vw;
     overflow: hidden;
 }
 
@@ -399,7 +400,7 @@ h1, p, b, .typing-container {
     height: 5vh;
     background-color: #f0f0f0;
     position: absolute;
-    bottom:10%;
+    top: 15%;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -428,6 +429,6 @@ h1, p, b, .typing-container {
       /* Add your CSS rules here. For example: */
       padding: 0;
       margin: 0;
-      bottom: 10vh;
+      bottom: 6.5vh;
     }
   }
