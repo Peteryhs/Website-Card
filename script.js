@@ -9,9 +9,9 @@ function changeImage() {
       var newSrc;
       if (body.classList.contains('dark-mode')) {
           // If dark mode is active, use a different image that is visible in dark mode
-          newSrc = image.src.includes('Static/pfp.jpg') ? 'hovercode_dark.svg' : 'Static/pfp.jpg';
+          newSrc = image.src.includes('Static/pfp.jpg') ? 'Static/hovercode_dark.svg' : 'Static/pfp.jpg';
       } else {
-          newSrc = image.src.includes('Static/pfp.jpg') ? 'hovercode.svg' : 'Static/pfp.jpg';
+          newSrc = image.src.includes('Static/pfp.jpg') ? 'Static/hovercode.svg' : 'Static/pfp.jpg';
       }
       var tempImage = new Image();
       tempImage.src = newSrc;
