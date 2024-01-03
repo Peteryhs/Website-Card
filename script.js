@@ -32,16 +32,21 @@ function changeImage() {
 document.querySelectorAll('.icon-button').forEach(button => {
   button.addEventListener('click', function() {
       var body = document.body;
+      var profilePic = document.getElementById('profilePic');
       body.classList.toggle('dark-mode');
       if (body.classList.contains('dark-mode')) {
           body.classList.add('light-icon');
-          // If dark mode is active, use a different image that is visible in dark mode
-          document.getElementById('profilePic').src = 'hovercode_dark.svg';
+          // If dark mode is active and the current image is the hovercode, use the dark mode version
+          if (profilePic.src.includes('hovercode.svg')) {
+              profilePic.src = 'hovercode_dark.svg';
+          }
       } else {
           body.classList.remove('light-icon');
           body.classList.remove('dark-mode');
-          // If dark mode is not active, use the original image
-          document.getElementById('profilePic').src = 'hovercode.svg';
+          // If dark mode is not active and the current image is the dark mode hovercode, use the original version
+          if (profilePic.src.includes('hovercode_dark.svg')) {
+              profilePic.src = 'hovercode.svg';
+          }
       }
 
       var container = this.parentElement;
@@ -51,6 +56,7 @@ document.querySelectorAll('.icon-button').forEach(button => {
       }, 1000);
   });
 });
+
 let i = 0;
 let txt = '<b>Peter'; /* The text */
 let speed = 100; /* The speed/duration of the effect in milliseconds */
