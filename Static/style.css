@@ -447,13 +447,11 @@ h1, p, b, .typing-container {
 .return-text:hover {
     /* Glowing effect on hover */
     text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
-    transform: scale(1.1); /* Slightly enlarges the text on hover */
 }
 
 .info-text:hover {
     /* Glowing effect on hover */
     text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
-    transform: scale(1.1); /* Slightly enlarges the text on hover */
 }
 
 .info-text {
