@@ -86,3 +86,57 @@ $('#infoCarousel').carousel({
 });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const returnText = document.querySelector('.return-text');
+
+  if (returnText) {
+      returnText.addEventListener('mouseover', () => {
+          returnText.style.textShadow = '0 0 15px #0059ff';
+          returnText.style.transform = 'scale(1.1)';
+      });
+
+      returnText.addEventListener('mouseout', () => {
+          returnText.style.textShadow = '';
+          returnText.style.transform = '';
+      });
+  }
+
+  // ... Rest of your existing JavaScript code ...
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const infoText = document.querySelector('#profilePicWrapper');
+
+  if (infoText) {
+     infoText.addEventListener('mouseover', () => {
+          infoText.style.textShadow = '0 0 15px #0059ff';
+          infoText.style.transform = 'scale(1.1)';
+      });
+
+      infoText.addEventListener('mouseout', () => {
+          infoText.style.textShadow = '';
+          infoText.style.transform = '';
+      });
+  }
+
+  // ... Rest of your existing JavaScript code ...
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const infoTextt = document.querySelector('.info-text');
+
+  if (infoTextt) {
+     infoTextt.addEventListener('mouseover', () => {
+          infoTextt.style.textShadow = '0 0 15px #0059ff';
+          infoTextt.style.transform = 'scale(1.1)';
+      });
+
+      infoTextt.addEventListener('mouseout', () => {
+          infoTextt.style.textShadow = '';
+          infoTextt.style.transform = '';
+      });
+  }
+
+  // ... Rest of your existing JavaScript code ...
+});
+

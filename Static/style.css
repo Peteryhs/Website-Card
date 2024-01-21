@@ -201,10 +201,14 @@ body {
     width: 300px;
     height: 300px;
     margin: 60px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 0 0px transparent; /* Initial state with no visible shadow */
 }
 
 #profilePicWrapper:hover {
-    animation: glow-pfp-fade-in 1s infinite alternate;
+    box-shadow: 0 0 15px #81D4FA; /* Glowing effect for images */
+    filter: drop-shadow(0 0 15px #81D4FA); /* Alternative glowing effect for images */
+    transform: scale(1.1); /* Scale up effect on hover */
 }
 
 .icon-button:focus {
@@ -399,6 +403,7 @@ h1, p, b, .typing-container {
     font-size: 1.2em;
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .bottom-container-m {
@@ -439,3 +444,19 @@ h1, p, b, .typing-container {
     }
 }
 
+.return-text:hover {
+    /* Glowing effect on hover */
+    text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
+    transform: scale(1.1); /* Slightly enlarges the text on hover */
+}
+
+.info-text:hover {
+    /* Glowing effect on hover */
+    text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
+    transform: scale(1.1); /* Slightly enlarges the text on hover */
+}
+
+.info-text {
+    animation: fade-in 1.5s forwards;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
