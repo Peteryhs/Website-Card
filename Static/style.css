@@ -100,6 +100,8 @@ body {
     position: absolute;
     z-index: -1;
     backdrop-filter: blur(12vmax);
+    -webkit-backdrop-filter: blur(12vmax);
+    color: transparent;
 }
 
 .background-ellipse {
@@ -142,7 +144,7 @@ body {
     background: linear-gradient(94deg,#0059ff 33.31%,#00c3ff 89.14%);
     background-clip: text;
     -webkit-background-clip: text;
-    animation: glow 1.5s forwards;
+    
 }
 
 .option {
@@ -317,7 +319,7 @@ h1, p, b, .typing-container {
 
 #infoCarousel {
     width: 100%;
-    height: 3vh;
+    height: 6vh;
     margin: auto;
 }
 
