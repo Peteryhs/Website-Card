@@ -100,7 +100,7 @@ function changeImage() {
         });
     }
   
-    // ... Rest of your existing JavaScript code ...
+
   });
   
   document.addEventListener('DOMContentLoaded', () => {
@@ -118,7 +118,7 @@ function changeImage() {
         });
     }
   
-    // ... Rest of your existing JavaScript code ...
+
   });
   
   document.addEventListener('DOMContentLoaded', () => {
@@ -135,7 +135,6 @@ function changeImage() {
         });
     }
   
-    // ... Rest of your existing JavaScript code ...
   });
   
   
