@@ -1,4 +1,3 @@
-body {
     background-color: #ffffff;
     color: #000000;
     font-family: 'Rubik', sans-serif;
@@ -63,6 +62,7 @@ body {
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
 }
+
 
 @keyframes fade-in {
     from {
@@ -143,6 +143,7 @@ body {
     background: linear-gradient(94deg,#0059ff 33.31%,#00c3ff 89.14%);
     background-clip: text;
     -webkit-background-clip: text;
+
 }
 
 .option {
@@ -202,13 +203,13 @@ body {
     height: 300px;
     margin: 60px;
     transition: box-shadow 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-    box-shadow: 0 0 0px transparent;
+    box-shadow: 0 0 0px transparent; /* Initial state with no visible shadow */
 }
 
 #profilePicWrapper:hover {
-    box-shadow: 0 0 15px #81D4FA;
-    filter: drop-shadow(0 0 15px #81D4FA);
-    transform: scale(1.1);
+    box-shadow: 0 0 15px #81D4FA; /* Glowing effect for images */
+    filter: drop-shadow(0 0 15px #81D4FA); /* Alternative glowing effect for images */
+    transform: scale(1.1); /* Scale up effect on hover */
 }
 
 .icon-button:focus {
@@ -358,6 +359,7 @@ h1, p, b, .typing-container {
 .fade-in-text-m {
     animation: fade-in 1.5s forwards;
     font-family: 'Rubik', sans-serif;
+
 }
 
 .fade-in-text p {
@@ -422,50 +424,8 @@ h1, p, b, .typing-container {
 }
 
 @media screen and (max-width: 767px) {
-    .img-margin {
-        margin-right: 0;
-    }
-    
-    .round-img {
-        width: 80%;
-        height: auto;
-    }
-    
-    #profilePicWrapper {
-        width: 200px;
-        height: 200px;
-        margin: 30px;
-    }
-    
-    .greeting {
-        font-size: 2em;
-    }
-    
-    .greeting-js {
-        font-size: 1em;
-    }
-    
-    .fade-in-text,
-    .fade-in-text-l {
-        font-size: 1em;
-    }
-    
-    .carousel-container {
-        width: 100%;
-    }
-    
-    .carousel-item {
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .typing-container {
-        width: 100%;
-        white-space: normal;
-    }
-    
-    .return-text {
-        font-size: 1em;
+    .bottom-container {
+        display: none;
     }
 }
 
@@ -475,12 +435,24 @@ h1, p, b, .typing-container {
     }
 }
 
+
+@media screen and (max-width: 767px) {
+    .col-12.col-md-10.offset-md-1.center-xy {
+      /* Add your CSS rules here. For example: */
+      padding: 0;
+      margin: 0;
+      bottom: 7vh;
+    }
+}
+
 .return-text:hover {
-    text-shadow: 0 0 10px #0059ff;
+    /* Glowing effect on hover */
+    text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
 }
 
 .info-text:hover {
-    text-shadow: 0 0 10px #0059ff;
+    /* Glowing effect on hover */
+    text-shadow: 0 0 10px #0059ff; /* Adjust color and glow size as needed */
 }
 
 .info-text {
