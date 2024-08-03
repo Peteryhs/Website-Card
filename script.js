@@ -26,7 +26,7 @@ function changeImage() {
     setTimeout(function() {
         wrapper.style.animation = '';
         console.log('Animation removed');
-    }, 1000);
+    }, 1750);
   }
   
   document.querySelectorAll('.icon-button').forEach(button => {
