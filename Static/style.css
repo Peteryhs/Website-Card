@@ -109,8 +109,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30vw;
-    height: 30vh;
+    width: 50vw;
+    height: 50vh;
     background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
     border-radius: 50%;
     z-index: -2;
