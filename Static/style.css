@@ -8,11 +8,7 @@
     display: block;
 }
 
-.All {
-    min-height: 100vh;
-    overflow: hidden;
-    display: block;
-}
+
 
 .full-height {
     height: 100vh;
@@ -94,16 +90,56 @@
     }
 }
 
-.body {
-    background: linear-gradient(45deg, #5c0eec, #00f7ff);
+#gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #5c0eec, #00f7ff, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    color: #000000;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
     overflow-y: hidden;
+    color: #000000;
+    transition: color 1s;
+}
+
+.All {
+    min-height: 100vh;
+    overflow: hidden;
     display: block;
-  }
+    position: relative;
+}
   
   @keyframes gradient {
     0% {
@@ -275,8 +311,11 @@ body.dark-mode .icon-button-container.loading::after {
 }
 
 body.dark-mode {
-    background-color: #000000;
-    color: #fff;
+    color: #ffffff;
+}
+
+body.dark-mode #gradient-background {
+    background: linear-gradient(-45deg, #1a0033, #000033, #000066, #003366);
 }
 
 h1, p, b, .typing-container {
@@ -359,11 +398,6 @@ h1, p, b, .typing-container {
     font-weight: bold;
 }
 
-.all {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .bottom-container {
     width: 30%;
