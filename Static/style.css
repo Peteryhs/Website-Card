@@ -94,41 +94,29 @@
     }
 }
 
-#blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    backdrop-filter: blur(12vmax);
-    -webkit-backdrop-filter: blur(12vmax);
-    color: transparent;
-}
+.body {
+    background: linear-gradient(45deg, #5c0eec, #00f7ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-.background-ellipse {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 50vh;
-    background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
-    border-radius: 50%;
-    z-index: -2;
-    animation: spin 1s, expand 1.5s ease-in-out;
-}
-
-.background-ellipse-m {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
-    border-radius: 50%;
-    z-index: -2;
-    animation: spin 200s, expand 1.5s ease-in-out;
-}
 
 @keyframes glow {
     0% {
