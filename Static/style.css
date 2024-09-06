@@ -114,7 +114,7 @@
     background: linear-gradient(45deg, rgb(92, 14, 236), rgb(0, 247, 255));
     border-radius: 50%;
     z-index: -2;
-    animation: spin 30s, expand 1.5s ease-in-out;
+    animation: spin 1s, expand 1.5s ease-in-out;
 }
 
 .background-ellipse-m {
