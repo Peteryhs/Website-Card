@@ -82,10 +82,9 @@ function changeImage() {
   
   $(document).ready(function(){
     $('#infoCarousel, #infoCarouselMobile').carousel({
-      interval: 2000 // specifies the time delay between slides in milliseconds
+      interval: 2000
     });
   });
-  
   document.addEventListener('DOMContentLoaded', () => {
     const returnText = document.querySelector('.return-text');
   
