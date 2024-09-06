@@ -82,27 +82,39 @@ function changeImage() {
   
   $(document).ready(function(){
     $('#infoCarousel, #infoCarouselMobile').carousel({
-      interval: 2000 // specifies the time delay between slides in milliseconds
+        interval: 2000 // specifies the time delay between slides in milliseconds
     });
-  });
-  
-  document.addEventListener('DOMContentLoaded', () => {
+
+    $('#showAllButton').click(function() {
+        var $carousel = $('#infoCarousel');
+        var $container = $('.carousel-container');
+        
+        if ($container.hasClass('show-all')) {
+            // If already showing all, revert to carousel
+            $container.removeClass('show-all');
+            $carousel.carousel('cycle');
+            $(this).text('Show All');
+        } else {
+            // If in carousel mode, switch to show all
+            $container.addClass('show-all');
+            $carousel.carousel('pause');
+            $(this).text('Show Carousel');
+        }
+    });
+
+    // Your existing code...
     const returnText = document.querySelector('.return-text');
-  
     if (returnText) {
         returnText.addEventListener('mouseover', () => {
             returnText.style.textShadow = '0 0 15px #0059ff';
         });
-  
+
         returnText.addEventListener('mouseout', () => {
             returnText.style.textShadow = '';
             returnText.style.transform = '';
         });
     }
-  
-
-  });
-  
+});
   document.addEventListener('DOMContentLoaded', () => {
     const infoText = document.querySelector('#profilePicWrapper');
   
