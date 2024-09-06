@@ -81,9 +81,9 @@ function changeImage() {
   window.onload = typeWriter;
   
   $(document).ready(function(){
-  $('#infoCarousel').carousel({
-    interval: 2000 // specifies the time delay between slides in milliseconds
-  });
+    $('#infoCarousel, #infoCarouselMobile').carousel({
+      interval: 2000 // specifies the time delay between slides in milliseconds
+    });
   });
   
   document.addEventListener('DOMContentLoaded', () => {
