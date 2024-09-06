@@ -81,10 +81,11 @@ function changeImage() {
   window.onload = typeWriter;
   
   $(document).ready(function(){
-    $('#infoCarousel, #infoCarouselMobile').carousel({
-      interval: 2000
-    });
+  $('#infoCarousel').carousel({
+    interval: 2000 // specifies the time delay between slides in milliseconds
   });
+  });
+  
   document.addEventListener('DOMContentLoaded', () => {
     const returnText = document.querySelector('.return-text');
   

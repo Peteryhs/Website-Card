@@ -343,18 +343,6 @@ h1, p, b, .typing-container {
     line-height: 1.5;
 }
 
-.carousel-inner {
-    overflow: hidden;
-  }
-  
-  .carousel-item {
-    display: none;
-  }
-  
-  .carousel-item.active {
-    display: flex;
-  }
-
 .greeting {
     font-size: 3em;
     font-weight: 500 !important;
@@ -472,15 +460,3 @@ h1, p, b, .typing-container {
     animation: fade-in 1.5s forwards;
     transition: text-shadow 0.3s ease, transform 0.3s ease;
 }
-
-@media (max-width: 991px) {
-    .carousel-container-m {
-      width: 100%;
-      height: auto;
-    }
-  
-    .carousel-item {
-      height: auto;
-      padding: 10px 0;
-    }
-  }
