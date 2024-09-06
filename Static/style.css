@@ -317,18 +317,6 @@ h1, p, b, .typing-container {
     white-space: nowrap;
 }
 
-#infoCarousel {
-    width: 100%;
-    height: 6vh;
-    margin: auto;
-}
-
-.carousel-container {
-    width: 400px;
-    overflow: hidden;
-}
-
-
 .carousel-container-m {
     width: 80vw;
     overflow: hidden;
